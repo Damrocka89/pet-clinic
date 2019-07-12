@@ -2,9 +2,11 @@ package com.ewelina.petclinic.services.map;
 
 import com.ewelina.petclinic.model.Pet;
 import com.ewelina.petclinic.services.PetService;
+import org.springframework.stereotype.Component;
 
 import java.util.Set;
 
+@Component
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
