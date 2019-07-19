@@ -5,11 +5,11 @@ import com.ewelina.petclinic.model.Pet;
 import com.ewelina.petclinic.services.OwnerService;
 import com.ewelina.petclinic.services.PetService;
 import com.ewelina.petclinic.services.PetTypeService;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Component
+@Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;
