@@ -2,12 +2,14 @@ package com.ewelina.petclinic.services.map;
 
 import com.ewelina.petclinic.model.Pet;
 import com.ewelina.petclinic.services.PetService;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-@Component
-public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
+@Service
+@Profile({"default","map"})
+public class PetMapService extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();
